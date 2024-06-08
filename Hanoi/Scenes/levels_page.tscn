@@ -1,0 +1,122 @@
+[gd_scene load_steps=18 format=3 uid="uid://cy3g5yw0d8kbr"]
+
+[ext_resource type="Script" path="res://Scripts/levels_page.cs" id="1_vyn2f"]
+[ext_resource type="Texture2D" uid="uid://b5h4161twillu" path="res://assets/Game/hanoilevels (new) (1).png" id="2_micfr"]
+[ext_resource type="Texture2D" uid="uid://dl6te1v1u8s7m" path="res://assets/Game/Cadenas.png" id="3_i8ktn"]
+[ext_resource type="AudioStream" uid="uid://cwwotjc13s2ly" path="res://Sounds/music principale.mp3" id="3_w1mhn"]
+[ext_resource type="AudioStream" uid="uid://r6lwy88con8g" path="res://Sounds/MouseClick.wav" id="5_hac15"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dqr8l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dogmf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vt60p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54ktk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25xtt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jepxc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ablht"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j7ivg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vpmgt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fwdk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xax5d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auun7"]
+
+[node name="LevelsPage" type="Node2D"]
+script = ExtResource("1_vyn2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.085, 320.959)
+scale = Vector2(0.307, 0.316)
+texture = ExtResource("2_micfr")
+
+[node name="I" type="Button" parent="Sprite2D"]
+offset_left = 787.997
+offset_top = 715.32
+offset_right = 1247.0
+offset_bottom = 962.32
+theme_override_styles/normal = SubResource("StyleBoxTexture_dqr8l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dogmf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vt60p")
+theme_override_styles/focus = SubResource("StyleBoxTexture_54ktk")
+metadata/_edit_use_anchors_ = true
+
+[node name="II" type="Button" parent="Sprite2D"]
+offset_left = -632.199
+offset_top = 778.611
+offset_right = -173.199
+offset_bottom = 1037.61
+theme_override_styles/normal = SubResource("StyleBoxTexture_25xtt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jepxc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ablht")
+theme_override_styles/focus = SubResource("StyleBoxTexture_j7ivg")
+
+[node name="III" type="Button" parent="Sprite2D"]
+offset_left = -189.0
+offset_top = 70.0
+offset_right = 264.0
+offset_bottom = 317.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_vpmgt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3fwdk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xax5d")
+theme_override_styles/focus = SubResource("StyleBoxTexture_auun7")
+
+[node name="IV" type="Button" parent="Sprite2D"]
+offset_left = -1205.0
+offset_top = -183.0
+offset_right = -749.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_vpmgt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3fwdk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xax5d")
+theme_override_styles/focus = SubResource("StyleBoxTexture_auun7")
+
+[node name="V" type="Button" parent="Sprite2D"]
+offset_left = 175.619
+offset_top = -449.237
+offset_right = 621.619
+offset_bottom = -202.237
+theme_override_styles/normal = SubResource("StyleBoxTexture_vpmgt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3fwdk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xax5d")
+theme_override_styles/focus = SubResource("StyleBoxTexture_auun7")
+
+[node name="VI" type="Button" parent="Sprite2D"]
+offset_left = -827.638
+offset_top = -791.01
+offset_right = -381.638
+offset_bottom = -544.01
+theme_override_styles/normal = SubResource("StyleBoxTexture_vpmgt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3fwdk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xax5d")
+theme_override_styles/focus = SubResource("StyleBoxTexture_auun7")
+
+[node name="Cadenas1" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(-430.244, -503.035)
+texture = ExtResource("3_i8ktn")
+
+[node name="Cadenas2" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(397.117, -325.82)
+texture = ExtResource("3_i8ktn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_w1mhn")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hac15")
+
+[connection signal="pressed" from="Sprite2D/I" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="Sprite2D/II" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="Sprite2D/III" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="Sprite2D/IV" to="." method="_on_4_pressed"]

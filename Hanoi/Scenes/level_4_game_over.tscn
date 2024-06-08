@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnp3ff3gslkmf"]
+
+[ext_resource type="Script" path="res://Scripts/level_4_game_over.cs" id="1_0cpgv"]
+[ext_resource type="Texture2D" uid="uid://cdxe8gfyf7dca" path="res://assets/Levels/hanoilevel 04game over.png" id="2_m8civ"]
+[ext_resource type="AudioStream" uid="uid://2br8jeld7svd" path="res://Sounds/GameOver.wav" id="3_cqrk3"]
+[ext_resource type="AudioStream" uid="uid://r6lwy88con8g" path="res://Sounds/MouseClick.wav" id="4_1x14e"]
+
+[node name="Level4GameOver" type="Node2D"]
+script = ExtResource("1_0cpgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 326)
+scale = Vector2(0.305, 0.311)
+texture = ExtResource("2_m8civ")
+
+[node name="PlayAgain" type="Button" parent="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -544.0
+offset_top = -58.0
+offset_right = 529.0
+offset_bottom = 287.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_cqrk3")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1x14e")
+
+[connection signal="pressed" from="Sprite2D/PlayAgain" to="." method="_on_play_again_pressed"]

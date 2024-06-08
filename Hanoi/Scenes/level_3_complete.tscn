@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://8f3e2d3hfjjv"]
+
+[ext_resource type="Script" path="res://Scripts/level_3_complete.cs" id="1_u4ifp"]
+[ext_resource type="Texture2D" uid="uid://bem2c1oks1ny1" path="res://assets/Levels/hanoilevel 03 complete.png" id="2_djr3d"]
+[ext_resource type="AudioStream" uid="uid://dvwco014ogkni" path="res://Sounds/congrats .mp3" id="3_c22nf"]
+[ext_resource type="AudioStream" uid="uid://r6lwy88con8g" path="res://Sounds/MouseClick.wav" id="4_ukf2o"]
+
+[node name="Level3Complete" type="Node2D"]
+script = ExtResource("1_u4ifp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.307, 0.313)
+texture = ExtResource("2_djr3d")
+
+[node name="Next" type="Button" parent="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -254.0
+offset_top = 224.0
+offset_right = 215.0
+offset_bottom = 335.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_c22nf")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ukf2o")
+
+[connection signal="pressed" from="Sprite2D/Next" to="." method="_on_next_pressed"]

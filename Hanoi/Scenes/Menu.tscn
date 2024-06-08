@@ -1,0 +1,60 @@
+[gd_scene load_steps=13 format=3 uid="uid://cv6qw8yny8d8f"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.cs" id="1_4lnss"]
+[ext_resource type="Texture2D" uid="uid://vgbgtjtjcq7m" path="res://assets/Game/GamePicture.png" id="2_1vjpu"]
+[ext_resource type="AudioStream" uid="uid://cwwotjc13s2ly" path="res://Sounds/music principale.mp3" id="3_kfjox"]
+[ext_resource type="AudioStream" uid="uid://r6lwy88con8g" path="res://Sounds/MouseClick.wav" id="4_88abr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8d02j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tumdu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tgk31"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxrx7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ny2im"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0loab"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cu0i5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nxbby"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_4lnss")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 323.5)
+scale = Vector2(0.31, 0.315)
+texture = ExtResource("2_1vjpu")
+
+[node name="Play" type="Button" parent="Sprite2D"]
+offset_left = -545.161
+offset_top = -84.1269
+offset_right = 454.839
+offset_bottom = 168.873
+theme_override_styles/normal = SubResource("StyleBoxTexture_8d02j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tumdu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tgk31")
+theme_override_styles/focus = SubResource("StyleBoxTexture_hxrx7")
+
+[node name="Quit" type="Button" parent="Sprite2D"]
+offset_left = -545.0
+offset_top = 392.0
+offset_right = 452.0
+offset_bottom = 650.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ny2im")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0loab")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cu0i5")
+theme_override_styles/focus = SubResource("StyleBoxTexture_nxbby")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kfjox")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_88abr")
+
+[connection signal="pressed" from="Sprite2D/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Sprite2D/Quit" to="." method="_on_quit_pressed"]

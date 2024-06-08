@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6tuguh8e17dl"]
+
+[ext_resource type="Script" path="res://Scripts/level_1_complete.cs" id="1_praib"]
+[ext_resource type="Texture2D" uid="uid://de1lpg127sggf" path="res://assets/Levels/hanoilevel 01 complete .png" id="1_q34yb"]
+[ext_resource type="AudioStream" uid="uid://dvwco014ogkni" path="res://Sounds/congrats .mp3" id="3_audhj"]
+[ext_resource type="AudioStream" uid="uid://r6lwy88con8g" path="res://Sounds/MouseClick.wav" id="4_74ait"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ap5vy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8hv5c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m00u7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ytys8"]
+
+[node name="Level1Complete" type="Node2D"]
+script = ExtResource("1_praib")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.307, 0.313)
+texture = ExtResource("1_q34yb")
+
+[node name="Next" type="Button" parent="Sprite2D"]
+offset_left = -248.0
+offset_top = 192.0
+offset_right = 218.0
+offset_bottom = 300.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ap5vy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8hv5c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m00u7")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ytys8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_audhj")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_74ait")
+
+[connection signal="pressed" from="Sprite2D/Next" to="." method="_on_next_pressed"]

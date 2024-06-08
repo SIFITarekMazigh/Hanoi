@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1qgdfoq7u7at"]
+
+[ext_resource type="Script" path="res://Scripts/welcome.cs" id="1_vtrm2"]
+[ext_resource type="Texture2D" uid="uid://bygl2s1vvparb" path="res://assets/Game/hanoiwelcome to the game.png" id="2_h07vd"]
+[ext_resource type="AudioStream" uid="uid://cwwotjc13s2ly" path="res://Sounds/music principale.mp3" id="3_afejh"]
+[ext_resource type="AudioStream" uid="uid://r6lwy88con8g" path="res://Sounds/MouseClick.wav" id="4_muesf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cm3i8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yixjt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p67eg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wopuw"]
+
+[node name="Welcome" type="Node2D"]
+script = ExtResource("1_vtrm2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 338)
+scale = Vector2(0.307, 0.313)
+texture = ExtResource("2_h07vd")
+
+[node name="Next" type="Button" parent="Sprite2D"]
+offset_left = -410.0
+offset_top = 639.0
+offset_right = 528.0
+offset_bottom = 904.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_cm3i8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yixjt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p67eg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wopuw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_afejh")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_muesf")
+
+[connection signal="pressed" from="Sprite2D/Next" to="." method="_on_next_pressed"]

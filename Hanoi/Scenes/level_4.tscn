@@ -1,0 +1,239 @@
+[gd_scene load_steps=36 format=3 uid="uid://fyqj0ifin46g"]
+
+[ext_resource type="Script" path="res://Scripts/level_4.cs" id="1_dwrsc"]
+[ext_resource type="Texture2D" uid="uid://cwc75yluk8jvj" path="res://assets/Levels/hanoilevel 04 .png" id="1_qov5q"]
+[ext_resource type="Texture2D" uid="uid://bi8q5m1uh22d5" path="res://assets/Disques/Rectangle 68nouveaux disques .png" id="2_4wvcc"]
+[ext_resource type="Texture2D" uid="uid://ck840e31rkq1m" path="res://assets/Disques/Rectangle 62nouveaux disques .png" id="3_uvd73"]
+[ext_resource type="Texture2D" uid="uid://dw3awx8o6b2f" path="res://assets/Disques/Rectangle 67nouveaux disques .png" id="4_nx157"]
+[ext_resource type="Texture2D" uid="uid://dqk5mj8oiysl2" path="res://assets/Disques/Rectangle 65nouveaux disques .png" id="5_volnl"]
+[ext_resource type="Texture2D" uid="uid://dx0a43l7u6b2t" path="res://assets/Disques/Rectangle 66nouveaux disques .png" id="6_ere6a"]
+[ext_resource type="Texture2D" uid="uid://hyfu7bieh85u" path="res://assets/Disques/Rectangle 64nouveaux disques .png" id="7_na13s"]
+[ext_resource type="AudioStream" uid="uid://cwq8nn3wy53jx" path="res://Sounds/1 des 3 dernier niveaux.mp3" id="9_fic1c"]
+[ext_resource type="AudioStream" uid="uid://cht8uerkfitpm" path="res://Sounds/MovDisque.wav" id="10_qxd6u"]
+[ext_resource type="AudioStream" uid="uid://ck0xtc7dl0b84" path="res://Sounds/WrongMov.wav" id="11_fkj67"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vd7se"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_be07k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nr5ua"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_814e4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktnru"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kl7l2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibnat"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gc8gq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dt4gd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nygwu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnjb5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_whkcv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_emopj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvws7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48do8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8w6na"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijlno"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_owrp7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e2wun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h65ob"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w58ly"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohsgk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dw1ew"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0lfer"]
+
+[node name="Level4" type="Node2D"]
+script = ExtResource("1_dwrsc")
+
+[node name="PictureLevel4" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.307, 0.313)
+texture = ExtResource("1_qov5q")
+
+[node name="A_Vers_B" type="Button" parent="PictureLevel4"]
+offset_left = -1261.0
+offset_top = 607.0
+offset_right = -798.0
+offset_bottom = 712.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_vd7se")
+theme_override_styles/hover = SubResource("StyleBoxTexture_be07k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nr5ua")
+theme_override_styles/focus = SubResource("StyleBoxTexture_814e4")
+
+[node name="A_Vers_C" type="Button" parent="PictureLevel4"]
+offset_left = -1261.0
+offset_top = 719.0
+offset_right = -798.0
+offset_bottom = 824.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ktnru")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kl7l2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibnat")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gc8gq")
+
+[node name="B_Vers_A" type="Button" parent="PictureLevel4"]
+offset_left = -274.0
+offset_top = 607.0
+offset_right = 192.0
+offset_bottom = 712.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_dt4gd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nygwu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tnjb5")
+theme_override_styles/focus = SubResource("StyleBoxTexture_whkcv")
+
+[node name="B_Vers_C" type="Button" parent="PictureLevel4"]
+offset_left = -273.743
+offset_top = 725.0
+offset_right = 192.257
+offset_bottom = 831.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_emopj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nvws7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_48do8")
+theme_override_styles/focus = SubResource("StyleBoxTexture_8w6na")
+
+[node name="C_Vers_A" type="Button" parent="PictureLevel4"]
+offset_left = 697.0
+offset_top = 607.0
+offset_right = 1166.0
+offset_bottom = 716.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ijlno")
+theme_override_styles/hover = SubResource("StyleBoxTexture_owrp7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e2wun")
+theme_override_styles/focus = SubResource("StyleBoxTexture_h65ob")
+
+[node name="C_Vers_B" type="Button" parent="PictureLevel4"]
+offset_left = 697.0
+offset_top = 719.0
+offset_right = 1163.0
+offset_bottom = 828.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_w58ly")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ohsgk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dw1ew")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0lfer")
+
+[node name="disque1" type="Sprite2D" parent="."]
+position = Vector2(260, 330)
+scale = Vector2(0.08, 0.1)
+texture = ExtResource("6_ere6a")
+
+[node name="Button" type="Button" parent="disque1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -937.0
+offset_top = -180.0
+offset_right = 938.0
+offset_bottom = 170.0
+
+[node name="disque2" type="Sprite2D" parent="."]
+position = Vector2(260, 360)
+scale = Vector2(0.1, 0.104)
+texture = ExtResource("4_nx157")
+
+[node name="Button" type="Button" parent="disque2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -920.0
+offset_top = -173.0
+offset_right = 920.0
+offset_bottom = 163.0
+
+[node name="disque3" type="Sprite2D" parent="."]
+position = Vector2(260, 390)
+scale = Vector2(0.115, 0.104)
+texture = ExtResource("5_volnl")
+
+[node name="Button" type="Button" parent="disque3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -922.0
+offset_top = -173.0
+offset_right = 930.0
+offset_bottom = 163.0
+
+[node name="disque4" type="Sprite2D" parent="."]
+position = Vector2(260, 420)
+scale = Vector2(0.13, 0.104)
+texture = ExtResource("3_uvd73")
+
+[node name="Button" type="Button" parent="disque4"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -931.0
+offset_top = -173.0
+offset_right = 923.0
+offset_bottom = 163.0
+
+[node name="disque5" type="Sprite2D" parent="."]
+position = Vector2(260, 450)
+scale = Vector2(0.14, 0.104)
+texture = ExtResource("7_na13s")
+
+[node name="Button" type="Button" parent="disque5"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -921.0
+offset_top = -173.0
+offset_right = 929.0
+offset_bottom = 163.0
+
+[node name="disque6" type="Sprite2D" parent="."]
+position = Vector2(260, 480)
+scale = Vector2(0.155, 0.104)
+texture = ExtResource("2_4wvcc")
+
+[node name="Button" type="Button" parent="disque6"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -929.0
+offset_top = -173.0
+offset_right = 929.0
+offset_bottom = 163.0
+
+[node name="nbDeplacement" type="Label" parent="."]
+offset_left = 916.0
+offset_top = 84.0
+offset_right = 986.0
+offset_bottom = 151.0
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_fic1c")
+autoplay = true
+
+[node name="mov" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_qxd6u")
+
+[node name="erreur" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_fkj67")
+
+[connection signal="pressed" from="PictureLevel4/A_Vers_B" to="." method="_on_a_vers_b_pressed"]
+[connection signal="pressed" from="PictureLevel4/A_Vers_C" to="." method="_on_a_vers_c_pressed"]
+[connection signal="pressed" from="PictureLevel4/B_Vers_A" to="." method="_on_b_vers_a_pressed"]
+[connection signal="pressed" from="PictureLevel4/B_Vers_C" to="." method="_on_b_vers_c_pressed"]
+[connection signal="pressed" from="PictureLevel4/C_Vers_A" to="." method="_on_c_vers_a_pressed"]
+[connection signal="pressed" from="PictureLevel4/C_Vers_B" to="." method="_on_c_vers_b_pressed"]
+[connection signal="button_down" from="disque1/Button" to="." method="_on_button_button1_down"]
+[connection signal="button_up" from="disque1/Button" to="." method="_on_button_button1_up"]
+[connection signal="button_down" from="disque2/Button" to="." method="_on_button_button2_down"]
+[connection signal="button_up" from="disque2/Button" to="." method="_on_button_button2_up"]
+[connection signal="button_down" from="disque3/Button" to="." method="_on_button_button3_down"]
+[connection signal="button_up" from="disque3/Button" to="." method="_on_button_button3_up"]
+[connection signal="button_down" from="disque4/Button" to="." method="_on_button_button4_down"]
+[connection signal="button_up" from="disque4/Button" to="." method="_on_button_button4_up"]
+[connection signal="button_down" from="disque5/Button" to="." method="_on_button_button5_down"]
+[connection signal="button_up" from="disque5/Button" to="." method="_on_button_button5_up"]
+[connection signal="button_down" from="disque6/Button" to="." method="_on_button_button6_down"]
+[connection signal="button_up" from="disque6/Button" to="." method="_on_button_button6_up"]

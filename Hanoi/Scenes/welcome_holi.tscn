@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bso6fmttr4vp0"]
+
+[ext_resource type="Script" path="res://Scripts/welcome_holi.cs" id="1_1kitn"]
+[ext_resource type="Texture2D" uid="uid://q2a2pkqv782g" path="res://assets/Game/hanoiwelcome to the world of holi.png" id="1_262em"]
+[ext_resource type="AudioStream" uid="uid://cwq8nn3wy53jx" path="res://Sounds/1 des 3 dernier niveaux.mp3" id="2_8qqd2"]
+
+[node name="WelcomeHoli" type="Node2D"]
+script = ExtResource("1_1kitn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 338)
+scale = Vector2(0.307, 0.313)
+texture = ExtResource("1_262em")
+
+[node name="Next" type="Button" parent="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -345.0
+offset_top = 661.0
+offset_right = 583.0
+offset_bottom = 927.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8qqd2")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Sprite2D/Next" to="." method="_on_next_pressed"]

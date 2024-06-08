@@ -1,0 +1,220 @@
+[gd_scene load_steps=31 format=3 uid="uid://cwu6nwqpj5xus"]
+
+[ext_resource type="Script" path="res://Scripts/level_3.cs" id="1_i8q4r"]
+[ext_resource type="Texture2D" uid="uid://br0e51fow3hv6" path="res://assets/Levels/hanoilevel 03 .png" id="2_qctnd"]
+[ext_resource type="Texture2D" uid="uid://cjioxkeytayjk" path="res://assets/Disques/Rectangle 42disques 3 niveaux.png" id="3_e4veh"]
+[ext_resource type="AudioStream" uid="uid://ccxwursh8bdtt" path="res://Sounds/1 des 3 premier niveau (3).mp3" id="4_fwrls"]
+[ext_resource type="AudioStream" uid="uid://cht8uerkfitpm" path="res://Sounds/MovDisque.wav" id="5_73bmg"]
+[ext_resource type="AudioStream" uid="uid://ck0xtc7dl0b84" path="res://Sounds/WrongMov.wav" id="6_dh1w6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjfcb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oqhpc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_codc4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8525s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81swf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_475lb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1oeq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8dm2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yuaew"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gh833"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lyatr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73ixh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jkys"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7wp4p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aisy3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbcs3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5f5cs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufaid"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ic6r3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ncpww"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmvw7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sovde"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bvi5v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvskd"]
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_i8q4r")
+
+[node name="PictureLevel3" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.307, 0.313)
+texture = ExtResource("2_qctnd")
+
+[node name="A_Vers_B" type="Button" parent="PictureLevel3"]
+offset_left = -1261.0
+offset_top = 607.0
+offset_right = -794.0
+offset_bottom = 712.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_sjfcb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oqhpc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_codc4")
+theme_override_styles/focus = SubResource("StyleBoxTexture_8525s")
+
+[node name="A_Vers_C" type="Button" parent="PictureLevel3"]
+offset_left = -1261.0
+offset_top = 719.0
+offset_right = -795.0
+offset_bottom = 828.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_81swf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_475lb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h1oeq")
+theme_override_styles/focus = SubResource("StyleBoxTexture_y8dm2")
+
+[node name="B_Vers_A" type="Button" parent="PictureLevel3"]
+offset_left = -277.0
+offset_top = 604.0
+offset_right = 192.0
+offset_bottom = 712.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_yuaew")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gh833")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lyatr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_73ixh")
+
+[node name="B_Vers_C" type="Button" parent="PictureLevel3"]
+offset_left = -274.0
+offset_top = 719.0
+offset_right = 189.0
+offset_bottom = 827.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0jkys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7wp4p")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aisy3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vbcs3")
+
+[node name="C_Vers_A" type="Button" parent="PictureLevel3"]
+offset_left = 694.0
+offset_top = 607.0
+offset_right = 1163.0
+offset_bottom = 716.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5f5cs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ufaid")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ic6r3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ncpww")
+
+[node name="C_Vers_B" type="Button" parent="PictureLevel3"]
+offset_left = 694.0
+offset_top = 719.0
+offset_right = 1166.0
+offset_bottom = 828.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmvw7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sovde")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bvi5v")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mvskd")
+
+[node name="disque1" type="Sprite2D" parent="."]
+position = Vector2(260, 360)
+scale = Vector2(0.08, 0.1)
+texture = ExtResource("3_e4veh")
+
+[node name="Button" type="Button" parent="disque1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -925.0
+offset_top = -180.0
+offset_right = 925.0
+offset_bottom = 168.0
+
+[node name="disque2" type="Sprite2D" parent="."]
+position = Vector2(260, 390)
+scale = Vector2(0.1, 0.104)
+texture = ExtResource("3_e4veh")
+
+[node name="Button" type="Button" parent="disque2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -920.0
+offset_top = -173.0
+offset_right = 920.0
+offset_bottom = 163.0
+
+[node name="disque3" type="Sprite2D" parent="."]
+position = Vector2(260, 420)
+scale = Vector2(0.12, 0.104)
+texture = ExtResource("3_e4veh")
+
+[node name="Button" type="Button" parent="disque3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -925.0
+offset_top = -173.0
+offset_right = 925.0
+offset_bottom = 163.0
+
+[node name="disque4" type="Sprite2D" parent="."]
+position = Vector2(260, 450)
+scale = Vector2(0.14, 0.104)
+texture = ExtResource("3_e4veh")
+
+[node name="Button" type="Button" parent="disque4"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -929.0
+offset_top = -173.0
+offset_right = 921.0
+offset_bottom = 163.0
+
+[node name="disque5" type="Sprite2D" parent="."]
+position = Vector2(260, 480)
+scale = Vector2(0.155, 0.104)
+texture = ExtResource("3_e4veh")
+
+[node name="Button" type="Button" parent="disque5"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -923.0
+offset_top = -173.0
+offset_right = 923.0
+offset_bottom = 163.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fwrls")
+autoplay = true
+
+[node name="nbDeplacement" type="Label" parent="."]
+offset_left = 900.0
+offset_top = 95.0
+offset_right = 976.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mov" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_73bmg")
+
+[node name="erreur" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dh1w6")
+
+[connection signal="pressed" from="PictureLevel3/A_Vers_B" to="." method="_on_a_vers_b_pressed"]
+[connection signal="pressed" from="PictureLevel3/A_Vers_C" to="." method="_on_a_vers_c_pressed"]
+[connection signal="pressed" from="PictureLevel3/B_Vers_A" to="." method="_on_b_vers_a_pressed"]
+[connection signal="pressed" from="PictureLevel3/B_Vers_C" to="." method="_on_b_vers_c_pressed"]
+[connection signal="pressed" from="PictureLevel3/C_Vers_A" to="." method="_on_c_vers_a_pressed"]
+[connection signal="pressed" from="PictureLevel3/C_Vers_B" to="." method="_on_c_vers_b_pressed"]
+[connection signal="button_down" from="disque1/Button" to="." method="_on_button_button1_down"]
+[connection signal="button_up" from="disque1/Button" to="." method="_on_button_button1_up"]
+[connection signal="button_down" from="disque2/Button" to="." method="_on_button_button2_down"]
+[connection signal="button_up" from="disque2/Button" to="." method="_on_button_button2_up"]
+[connection signal="button_down" from="disque3/Button" to="." method="_on_button_button3_down"]
+[connection signal="button_up" from="disque3/Button" to="." method="_on_button_button3_up"]
+[connection signal="button_down" from="disque4/Button" to="." method="_on_button_button4_down"]
+[connection signal="button_up" from="disque4/Button" to="." method="_on_button_button4_up"]
+[connection signal="button_down" from="disque5/Button" to="." method="_on_button_button5_down"]
+[connection signal="button_up" from="disque5/Button" to="." method="_on_button_button5_up"]

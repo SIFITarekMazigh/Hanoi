@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://unlvbvlkopkl"]
+
+[ext_resource type="Texture2D" uid="uid://dtdjym8ulcr1f" path="res://assets/Levels/hanoilevel 02 game over.png" id="1_3fla7"]
+[ext_resource type="Script" path="res://Scripts/level_2_game_over.cs" id="1_fk23t"]
+[ext_resource type="AudioStream" uid="uid://2br8jeld7svd" path="res://Sounds/GameOver.wav" id="3_flpcb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3iome"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oayqo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adrnl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ae0e"]
+
+[node name="Level2GameOver" type="Node2D"]
+script = ExtResource("1_fk23t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 326)
+scale = Vector2(0.305, 0.311)
+texture = ExtResource("1_3fla7")
+
+[node name="PlayAgain" type="Button" parent="Sprite2D"]
+offset_left = -531.0
+offset_top = -158.0
+offset_right = 538.0
+offset_bottom = 193.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_3iome")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oayqo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_adrnl")
+theme_override_styles/focus = SubResource("StyleBoxTexture_6ae0e")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_flpcb")
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Sprite2D/PlayAgain" to="." method="_on_play_again_pressed"]
